@@ -1,19 +1,19 @@
 namespace OpenClose
 {
-    public class EmployeePartTime : IEmployee
+        public class EmployeeContractor : IEmployee
     {
-        public EmployeePartTime(string fullname, int hoursWorked)
+        public EmployeeContractor(string fullname, int hoursWorked)
         {
             Fullname = fullname;
             HoursWorked = hoursWorked;
-        }
+        }  
 
         public string Fullname { get; set; }
         public int HoursWorked { get; set; }
 
         public decimal CalculateSalaryMonthly()
         {
-            decimal hourValue = 20000M;
+            decimal hourValue = 25000M;
             decimal salary = hourValue * HoursWorked;
             return salary;
         }
